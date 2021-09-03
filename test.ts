@@ -20,9 +20,17 @@ const conversation: IConversation = {
 };
 
 axios
-  .post("http://localhost:3000/my-webhook-action", {
-    conversation,
-  })
+  .post(
+    "http://localhost:3000/my-webhook-action",
+    {
+      conversation,
+    },
+    {
+      headers: {
+        Authorization: "Basic super-secret",
+      },
+    }
+  )
   .then((res) => {
     console.log(JSON.stringify(res.data, null, 2));
   });

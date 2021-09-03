@@ -15,7 +15,11 @@ app.use(json());
 const port = 3000;
 
 app.post("/my-webhook-action", (req, res) => {
-  const secret = req.headers["X-Bavard-Secret"];
+  const secret = req.headers.authorization?.split(" ")?.[1];
+  if (secret !== "super-secret") {
+    res.sendStatus(401);
+    return;
+  }
   const conversation: IConversation = req.body.conversation;
   const lastTurn = conversation.turns[conversation.turns.length - 1];
 
