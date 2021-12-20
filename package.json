@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/bavard-ai/webhook-actions-example#readme",
   "dependencies": {
-    "@bavard/agent-config": "^0.1.26",
-    "axios": "^0.21.1",
-    "express": "^4.17.1"
+    "@bavard/agent-config": "^0.1.58",
+    "axios": "^0.24.0",
+    "express": "^4.17.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.4.2"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   }
 }

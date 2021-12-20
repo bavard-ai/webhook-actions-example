@@ -38,7 +38,10 @@ app.post("/my-webhook-action", (req, res) => {
     }
   }
 
-  res.send(responseAction);
+  res.send(
+    // NOTE: You must return an array containing 1 to 3 response actions.
+    [responseAction]
+  );
 });
 
 app.listen(port, () => {
